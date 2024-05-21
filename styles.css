@@ -44,19 +44,15 @@ section{
     position: relative;
 }
 
-#player1 {
+#banano {
     position: absolute;
     background-color: white;
 }
-/*
-#player2 {
+
+#bananoEnemy {
     position: absolute;
     background-color: yellow;
-    height: 200px;
-    width: 50px;
-    margin-top: 500px;
-    margin-left: 750px;
-}*/
+}
 
 footer{
     display: flex;

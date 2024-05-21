@@ -1,4 +1,4 @@
-class Player1 {
+class Banano {
     constructor (x,y){
     this.x = x;
     this.y = y;
@@ -11,21 +11,21 @@ class Player1 {
     this.speed = 5;
     }
 
-    insertPlayer1 () {
-        this.sprite.setAttribute('id', 'player1');
+    insertBanano () {
+        this.sprite.setAttribute('id', 'banano');
         this.sprite.style.top = this.y + 'px';
         this.sprite.style.left = this.x + 'px';
         this.sprite.style.width = this.width + 'px';
         this.sprite.style.height = this.heigth + 'px';
-        board.appendChild(this.sprite);
-       
+        board.appendChild(this.sprite);  
     }
 
     move() {
         let nextX = this.x + this.speed * this.direction
-        if (nextX <= 800 - this.width && nextX >= 0) {
+        if (nextX <= 1200 - this.width && nextX >= 0) {
             this.x = nextX
             this.sprite.style.left = this.x + 'px'
         }
     }
+    
 }
