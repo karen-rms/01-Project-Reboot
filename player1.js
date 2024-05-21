@@ -20,12 +20,25 @@ class Banano {
         board.appendChild(this.sprite);  
     }
 
+    checkColission(){
+        if (banano.x > bananoEnemy.x + bananoEnemy.width ||
+            banano.x + banano.width < bananoEnemy.x ||
+            banano.y > bananoEnemy.y + bananoEnemy.height ||
+            banano.y + banano.height < bananoEnemy.y
+         ){
+         } else {
+            console.log("collision detected")
+         }
+    }
+    
     move() {
         let nextX = this.x + this.speed * this.direction
         if (nextX <= 1200 - this.width && nextX >= 0) {
             this.x = nextX
             this.sprite.style.left = this.x + 'px'
+            this.checkColission()
         }
     }
     
 }
+
