@@ -1,0 +1,103 @@
+body {
+    margin: 0, auto;
+    display: flex;
+    justify-content: center;
+}
+#canvas{
+    /* display:none;*/
+    position:relative;
+    width:1200px;
+    height:800px;
+    background-color: blueviolet;
+    margin:40px;
+    display: block;
+}
+
+header{
+    display:flex;
+    position: relative;
+    height:100px;
+    background-color: bisque;
+}
+.barra1 {
+    display: block;
+    width: 500px;
+    height: 50px;
+    background: linear-gradient(red,orange);
+    margin: 20px;
+    border: cyan 6px groove;
+    /*border: 5cm; background-color: red;
+    border-color: chocolate;*/
+}
+.barra2 {
+    display: block;
+    width: 500px;
+    height: 50px;
+    background: linear-gradient(red, orange);
+    margin: 20px;
+    margin-left: 140px;
+    border: cyan 6px groove;
+
+}
+section{
+    height:600px;
+    position: relative;
+}
+
+#player1 {
+    position: absolute;
+    background-color: white;
+}
+/*
+#player2 {
+    position: absolute;
+    background-color: yellow;
+    height: 200px;
+    width: 50px;
+    margin-top: 500px;
+    margin-left: 750px;
+}*/
+
+footer{
+    display: flex;
+    position: relative;
+    height: 100px;
+    justify-content: space-around;
+    background-color: aqua;
+}
+
+.controlJugador1{
+    display:block;
+    background: linear-gradient(blue, cyan);
+    margin-bottom: 10px;
+    margin-top: 10px;
+    width:400px;
+    text-align: center;
+    padding:10px;
+    font-family: 'Jersey 10';
+    font-size: 30px;
+    color:white;
+}
+.controlJugador2{
+    display:block;
+    background: linear-gradient(blue, cyan);
+    margin-bottom: 10px;
+    margin-top: 10px;
+    width:400px;
+    text-align: center;
+    padding: 10px;
+    font-family: 'Jersey 10';
+    font-size:30px;
+    color: white;
+}
+.logoFooter{
+    display:block;
+    background-color: black;
+    margin-bottom: 10px;
+    margin-top: 10px;
+    width:100px;
+    border-radius: 50%;
+    text-align: center;
+    color: white;
+    padding:20px;
+}
