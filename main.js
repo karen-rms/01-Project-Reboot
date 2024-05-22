@@ -18,6 +18,7 @@ function startGame() {
     bananoEnemy.insertBananoEnemy()
     timerMovePlayer = setInterval(() => banano.move(), 3) //esto hace que se mueva el jugador1
     timerMovePlayer2= setInterval(() => bananoEnemy.move(), 3) //esto hace que se mueva el jugador2
+
 }
 
 window.addEventListener("keydown",function(e){
