@@ -26,7 +26,7 @@ class BananoEnemy{
         this.sprite.style.height = this.heigth + 'px';
         board.appendChild(this.sprite);
     }
-    /*
+    
     checkColission() {
         if (banano.x > bananoEnemy.x + bananoEnemy.width ||
             banano.x + banano.width < bananoEnemy.x //||
@@ -50,11 +50,15 @@ class BananoEnemy{
     }
 
     attack() {
-        bananoEnemy.width -= 100
+        bananoEnemy.width += 100
+        bananoEnemy.x -= 100
         this.sprite.style.width = this.width + 'px';
+        this.sprite.style.left = this.x + 'px';
         setTimeout(() => {
-            bananoEnemy.width += 100
+            bananoEnemy.width -= 100
+            bananoEnemy.x += 100
             this.sprite.style.width = this.width + 'px';
+            this.sprite.style.left = this.x + 'px';
         }
             , 20)
         if (this.checkColission() === false && banano.health > 0) {
@@ -65,5 +69,5 @@ class BananoEnemy{
 
             }
         }
-    }*/
+    }
 }

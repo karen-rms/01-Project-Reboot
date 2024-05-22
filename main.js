@@ -8,9 +8,9 @@ let timerMovePlayer;
 
 let timerMovePlayer2;
 
-let bananoColission= banano.x + banano.width;
-
-let bananoEnemyX = bananoEnemy.x;
+let startScreen = document.getElementById('start');
+let startButton = document.getElementById('start-button');
+let credits = document.getElementById('credits-button');
 
 
 function startGame() {

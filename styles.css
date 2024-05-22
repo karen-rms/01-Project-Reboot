@@ -4,13 +4,12 @@ body {
     justify-content: center;
 }
 #canvas{
-    /* display:none;*/
+    display:block;
     position:relative;
     width:1200px;
     height:800px;
     background-color: blueviolet;
     margin:40px;
-    display: block;
 }
 
 header{
@@ -87,6 +86,7 @@ footer{
     font-size:30px;
     color: white;
     border: white 6px groove;
+    
 }
 .logoFooter{
     display:block;
@@ -99,4 +99,48 @@ footer{
     color: white;
     padding:20px;
     
+}
+
+#start{
+    display:flex;
+    position: relative;
+    width: 1200px;
+    height: 800px;
+    background-color: blueviolet;
+    margin: 40px;
+    display: block;
+}
+#startContent{
+    background-color: aqua;
+    display:flex;
+    position: relative;
+    justify-content: center;
+}
+#logo{
+    /*background-image: url()*/
+    width:904px;
+    height:416px;
+    background-color: grey;
+    display: block;
+    position: absolute;
+    top:120px
+}
+#start-button{
+    display:block;
+    background-color: blanchedalmond;
+    width:320px;
+    height:80px;
+    display: block;
+    position: absolute;
+    top:600px;
+    left:240px;
+}
+#credits-button{
+    background-color: brown;
+    width: 320px;
+    height: 80px;
+    display: block;
+    position: absolute;
+    left:650px;
+    top:600px;
 }
