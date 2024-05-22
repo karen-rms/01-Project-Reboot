@@ -8,9 +8,8 @@ class Banano {
     this.strength = 20;
     this.sprite = document.createElement('div')
     this.direction = 0;
-    this.speed = 5;
+    this.speed = 2;
     }
-
     insertBanano () {
         this.sprite.setAttribute('id', 'banano');
         this.sprite.style.top = this.y + 'px';
@@ -20,12 +19,45 @@ class Banano {
         board.appendChild(this.sprite);  
     }
 
+    checkColission() {
+        if (banano.x > bananoEnemy.x + bananoEnemy.width ||
+            banano.x + banano.width < bananoEnemy.x //||
+            //banano.y > bananoEnemy.y + bananoEnemy.height ||
+            //banano.y + banano.height < bananoEnemy.y
+        ){
+        } else {
+            //banano.x = bananoEnemy.x
+            banano.direction= -1 ;
+            bananoEnemy.direction = 1;
+            console.log("collision detected")
+            setTimeout(this.stop,300)
+            
+        }
+    }
+
+    stop(){
+        banano.direction = 0;
+        bananoEnemy.direction = 0;
+    }
+        
     move() {
-        let nextX = this.x + this.speed * this.direction
-        if (nextX <= 1200 - this.width && nextX >= 0) {
-            this.x = nextX
-            this.sprite.style.left = this.x + 'px'
+        let nextX = this.x + this.speed * this.direction;
+        if (nextX <= 1100 - this.width && nextX >= 0) {
+            this.x = nextX;
+            this.sprite.style.left = this.x + 'px';
+            this.checkColission();
+        }
+    }
+
+    attack(){
+        
+        if (this.checkColission()===false && bananoEnemy.health >0){
+            bananoEnemy.health -= banano.strength;    
+            console.log(bananoEnemy.health);
+        }else{
+            console.log("La vida de Player2 es: "+ bananoEnemy.health+", ha muerto");
+            }
         }
     }
     
-}
+

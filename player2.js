@@ -8,11 +8,11 @@ class BananoEnemy{
         this.strength = 20;
         this.sprite = document.createElement('div');
         this.direction = 0;
-        this.speed = 5;
+        this.speed = 2;
     }
     move() {
         let nextX = this.x + this.speed * this.direction
-        if (nextX <= 1200 - this.width && nextX >= 0) {
+        if (nextX <= 1200 - this.width && nextX >= 100) {
             this.x = nextX
             this.sprite.style.left = this.x + 'px'
         }

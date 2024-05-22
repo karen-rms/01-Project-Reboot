@@ -8,11 +8,16 @@ let timerMovePlayer;
 
 let timerMovePlayer2;
 
+let bananoColission= banano.x + banano.width;
+
+let bananoEnemyX = bananoEnemy.x;
+
+
 function startGame() {
     banano.insertBanano()
     bananoEnemy.insertBananoEnemy()
-    timerMovePlayer = setInterval(() => banano.move(), 10) //esto hace que se mueva el jugador1
-    timerMovePlayer2= setInterval(() => bananoEnemy.move(), 10) //esto hace que se mueva el jugador2
+    timerMovePlayer = setInterval(() => banano.move(), 3) //esto hace que se mueva el jugador1
+    timerMovePlayer2= setInterval(() => bananoEnemy.move(), 3) //esto hace que se mueva el jugador2
 }
 
 window.addEventListener("keydown",function(e){
@@ -23,12 +28,17 @@ window.addEventListener("keydown",function(e){
         case 'd':
             banano.direction=1
             break
-        /*Iria el case del ataque de banano */
+        case 'w':
+            banano.attack()
+            break
         case 'ArrowRight':
             bananoEnemy.direction=1
             break
         case 'ArrowLeft':
             bananoEnemy.direction=-1
+            break
+        case 'ArrowUp':
+            bananoEnemy.attack()
             break
     }
 }
@@ -38,5 +48,11 @@ window.addEventListener('keyup', function (e) { //esto hace que se quede quieto 
     banano.direction = 0;
     bananoEnemy.direction=0;
 })
+
+/*function colission(){
+    if(bananoColission<=bananoEnemyX){
+        banano.direction=0;
+    }
+}*/
 
 startGame()
