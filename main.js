@@ -75,6 +75,8 @@ credits.addEventListener("click",()=>{
     start.style.filter="blur" + "("+ 4 + "px)";
     creditsBox=document.createElement('div');
     creditsBox.setAttribute('id','creditsScreen');
-    creditsBox.innerText=('Nuestros nombres');
     body.appendChild(creditsBox);
+    creditsButton=document.createElement('button');
+    creditsButton.setAttribute('id', 'creditsButton')
+    creditsBox.appendChild(creditsButton)
 })
