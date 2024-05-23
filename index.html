@@ -13,7 +13,19 @@
 <body>
     <div id="canvas">
         <header>
-            <div class="barra1"></div><div class="barra2"></div>
+            <!--<div class="barra1"></div><div class="barra2"></div> -->
+            <div id="player1Life">
+                <div id="heartBanano1" class="bananoLife"></div><div id="heartBanano2" class="bananoLife"></div>
+                <div id="heartBanano3" class="bananoLife"> </div><div id="heartBanano4" class="bananoLife"></div>
+                <div id="heartBanano5" class="bananoLife"></div>
+            </div>
+            <div id="player2Life">
+                <div id="heartBananoEnemy1" class="bananoLife"></div>
+                <div id="heartBananoEnemy2" class="bananoLife"></div>
+                <div id="heartBananoEnemy3" class="bananoLife"> </div>
+                <div id="heartBananoEnemy4" class="bananoLife"></div>
+                <div id="heartBananoEnemy5" class="bananoLife"></div>
+            </div>
         </header>
         <section id="board">
             <!-- <div id="player1"></div> <div id="player2"></div> /-->
@@ -30,6 +42,14 @@
             <div id="logo"></div>
             <button id="start-button">Start Game</button> 
             <button id="credits-button">Credits</button>
+        </div>
+    </div>
+
+    <div id="gameOver">
+        <div id="gameOverContent">
+            <div id="gameOverLogo"></div>
+            <button id="menuButton">Menu</button>
+            <button id="restartButton">Restart Game</button>
         </div>
     </div>
 

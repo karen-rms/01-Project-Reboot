@@ -3,31 +3,81 @@ body {
     display: flex;
     justify-content: center;
 }
-#canvas{
-    display:block;
-    position:relative;
-    width:1200px;
-    height:800px;
+
+#canvas {
+    display: block;
+    position: relative;
+    width: 1200px;
+    height: 800px;
     background-color: blueviolet;
-    margin:40px;
+    margin: 40px;
 }
 
-header{
-    display:flex;
+header {
+    display: flex;
     position: relative;
-    height:100px;
+    height: 100px;
     background-color: bisque;
 }
+#player1Life{
+    display:flex;
+    margin-top:20px;
+    margin-left: 150px;
+}
+.bananoLife {
+    background-image: url(img/corazon.png);
+    background-size: contain;
+    width:50px;
+    height:50px;
+}
+#player2Life{
+    display:flex;
+    margin-top: 20px;
+    margin-left: 800px;
+    position: absolute;
+}
+#heartBanano1{
+    display:block;
+}
+#heartBanano2 {
+    display: block;
+}
+#heartBanano3 {
+    display: block;
+}
+#heartBanano4{
+    display: block;
+}
+#heartBanano5 {
+    display: block;
+}
+#heartEnemyBanano1 {
+    display: block;
+}
+#heartEnemyBanano2 {
+    display: block;
+}
+#heartEnemyBanano3 {
+    display: block;
+}
+#heartEnemyBanano4 {
+    display: block;
+}
+#heartEnemyBanano5 {
+    display: block;
+}
+
 .barra1 {
     display: block;
     width: 500px;
     height: 50px;
-    background: linear-gradient(red,orange);
+    background: linear-gradient(red, orange);
     margin: 20px;
     border: cyan 6px groove;
     /*border: 5cm; background-color: red;
     border-color: chocolate;*/
 }
+
 .barra2 {
     display: block;
     width: 500px;
@@ -38,14 +88,16 @@ header{
     border: cyan 6px groove;
 
 }
-section{
-    height:600px;
+
+section {
+    height: 600px;
     position: relative;
 }
 
 #banano {
     position: absolute;
-    background-color: white;
+    background-image: url(img/banano.gif);
+    background-size:cover
 }
 
 #bananoEnemy {
@@ -53,7 +105,7 @@ section{
     background-color: yellow;
 }
 
-footer{
+footer {
     display: flex;
     position: relative;
     height: 100px;
@@ -61,86 +113,91 @@ footer{
     background-color: green;
 }
 
-.controlJugador1{
-    display:block;
+.controlJugador1 {
+    display: block;
     background: linear-gradient(blue, cyan);
     margin-bottom: 10px;
     margin-top: 10px;
-    width:400px;
-    text-align: center;
-    padding:5px;
-    font-family: 'Jersey 10';
-    font-size: 30px;
-    color:white;
-    border: white 6px groove;
-}
-.controlJugador2{
-    display:block;
-    background: linear-gradient(blue, cyan);
-    margin-bottom: 10px;
-    margin-top: 10px;
-    width:400px;
+    width: 400px;
     text-align: center;
     padding: 5px;
     font-family: 'Jersey 10';
-    font-size:30px;
+    font-size: 30px;
     color: white;
     border: white 6px groove;
-    
 }
-.logoFooter{
-    display:block;
+
+.controlJugador2 {
+    display: block;
+    background: linear-gradient(blue, cyan);
+    margin-bottom: 10px;
+    margin-top: 10px;
+    width: 400px;
+    text-align: center;
+    padding: 5px;
+    font-family: 'Jersey 10';
+    font-size: 30px;
+    color: white;
+    border: white 6px groove;
+
+}
+
+.logoFooter {
+    display: block;
     background-color: black;
     margin-bottom: 10px;
     margin-top: 10px;
-    width:100px;
+    width: 100px;
     border-radius: 50%;
     text-align: center;
     color: white;
-    padding:20px;
-    
+    padding: 20px;
+
 }
 
-#start{
-    display:flex;
+#start {
+    display: none;
     position: relative;
     width: 1200px;
     height: 800px;
     background-color: blueviolet;
     margin: 40px;
-    display: block;
 }
-#startContent{
+
+#startContent {
     background-color: aqua;
-    display:flex;
+    display: flex;
     position: relative;
     justify-content: center;
 }
-#logo{
+
+#logo {
     /*background-image: url()*/
-    width:904px;
-    height:416px;
+    width: 904px;
+    height: 416px;
     background-color: grey;
     display: block;
     position: absolute;
-    top:120px
+    top: 120px
 }
-#start-button{
-    display:block;
+
+#start-button {
+    display: block;
     background-color: blanchedalmond;
-    width:320px;
-    height:80px;
+    width: 320px;
+    height: 80px;
     display: block;
     position: absolute;
-    top:600px;
-    left:240px;
+    top: 600px;
+    left: 240px;
 }
-#credits-button{
+
+#credits-button {
     background-color: brown;
     width: 320px;
     height: 80px;
     display: block;
     position: absolute;
-    left:650px;
-    top:600px;
+    left: 650px;
+    top: 600px;
 }

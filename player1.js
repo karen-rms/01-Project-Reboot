@@ -2,7 +2,7 @@ class Banano {
     constructor (x,y){
     this.x = x;
     this.y = y;
-    this.width = 100;
+    this.width = 200;
     this.heigth = 200;
     this.health = 100;
     this.strength = 20;
@@ -32,7 +32,7 @@ class Banano {
             //banano.x = bananoEnemy.x
             banano.direction= -1 ;
             bananoEnemy.direction = 1;
-            console.log("collision detected")
+            //console.log("collision detected")
             setTimeout(this.stop,300)
             return false
         }
@@ -61,13 +61,24 @@ class Banano {
             }
             , 20)
         if (this.checkColission() === false && bananoEnemy.health > 0){
-            bananoEnemy.health -= banano.strength;    
+            bananoEnemy.health -= banano.strength;
             console.log(bananoEnemy.health);
             if (bananoEnemy.health <= 0){
                 console.log("La vida de Player2 es: " + bananoEnemy.health + ", ha muerto");
 
             }
          }
+        if(bananoEnemy.health===80){
+            bananoEnemyHeart1.style.display = "none";
+        }else if(bananoEnemy.health===60){
+            bananoEnemyHeart2.style.display = "none";
+        }else if(bananoEnemy.health===40){
+            bananoEnemyHeart3.style.display = "none";
+        }else if(bananoEnemy.health===20){
+            bananoEnemyHeart4.style.display = "none";
+        }else if(bananoEnemy.health===0){
+            bananoEnemyHeart5.style.display = "none";
+        }
         }
     }
     
