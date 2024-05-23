@@ -1,8 +1,10 @@
 let board = document.getElementById('board');
 
-let banano = new Banano (300,400);
+let canvas = document.getElementById('canvas')
 
-let bananoEnemy= new BananoEnemy(800,400);
+let banano = new Banano (300,350);
+
+let bananoEnemy= new BananoEnemy(800,350);
 
 let bananoHeart1 =document.getElementById('heartBanano1');
 let bananoHeart2 = document.getElementById('heartBanano2');
@@ -22,7 +24,7 @@ let timerMovePlayer2;
 
 let startScreen = document.getElementById('start');
 let startButton = document.getElementById('start-button');
-let credits = document.getElementById('credits-button');
+let credits = document.getElementById('credits-button'); // hay que trabajar en ello aún
 
 
 function startGame() {
@@ -62,10 +64,17 @@ window.addEventListener('keyup', function (e) { //esto hace que se quede quieto 
     bananoEnemy.direction=0;
 })
 
-/*function colission(){
-    if(bananoColission<=bananoEnemyX){
-        banano.direction=0;
-    }
-}*/
+startButton.addEventListener("click", () => {
+    console.log("Press")
+    canvas.style.display = "block"
+    start.style.display = "none"
+    startGame()
+})
 
-startGame()
+credits.addEventListener("click",()=>{
+    start.style.filter="blur" + "("+ 4 + "px)";
+    creditsBox=document.createElement('div');
+    creditsBox.setAttribute('id','creditsScreen');
+    creditsBox.innerText=('Nuestros nombres');
+    body.appendChild(creditsBox);
+})

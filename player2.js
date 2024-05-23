@@ -69,15 +69,15 @@ class BananoEnemy{
 
             }
             if (banano.health === 80) {
-                bananoHeart5.style.display = "none";
+                bananoHeart5.style.visibility = "hidden";
             } else if (banano.health === 60) {
-                bananoHeart4.style.display = "none";
+                bananoHeart4.style.visibility = "hidden";
             } else if (banano.health === 40) {
-                bananoHeart3.style.display = "none";
+                bananoHeart3.style.visibility = "hidden";
             } else if (banano.health === 20) {
-                bananoHeart2.style.display = "none";
+                bananoHeart2.style.visibility = "hidden";
             } else if (banano.health === 0) {
-                bananoHeart1.style.display = "none";
+                bananoHeart1.style.visibility = "hidden";
             }
         }
     }

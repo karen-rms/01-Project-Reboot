@@ -69,15 +69,15 @@ class Banano {
             }
          }
         if(bananoEnemy.health===80){
-            bananoEnemyHeart1.style.display = "none";
+            bananoEnemyHeart1.style.visibility = "hidden";
         }else if(bananoEnemy.health===60){
-            bananoEnemyHeart2.style.display = "none";
+            bananoEnemyHeart2.style.visibility = "hidden";
         }else if(bananoEnemy.health===40){
-            bananoEnemyHeart3.style.display = "none";
+            bananoEnemyHeart3.style.visibility = "hidden";
         }else if(bananoEnemy.health===20){
-            bananoEnemyHeart4.style.display = "none";
+            bananoEnemyHeart4.style.visibility = "hidden";
         }else if(bananoEnemy.health===0){
-            bananoEnemyHeart5.style.display = "none";
+            bananoEnemyHeart5.style.visibility = "hidden";
         }
         }
     }
