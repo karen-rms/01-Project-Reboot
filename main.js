@@ -25,7 +25,7 @@ let timerMovePlayer2;
 let startScreen = document.getElementById('start');
 let startButton = document.getElementById('start-button');
 let credits = document.getElementById('credits-button'); // hay que trabajar en ello aún
-
+let returnButton = document.getElementById('returnButton');
 
 function startGame() {
     banano.insertBanano()
@@ -76,7 +76,14 @@ credits.addEventListener("click",()=>{
     creditsBox=document.createElement('div');
     creditsBox.setAttribute('id','creditsScreen');
     body.appendChild(creditsBox);
-    creditsButton=document.createElement('button');
-    creditsButton.setAttribute('id', 'creditsButton')
-    creditsBox.appendChild(creditsButton)
+    returnButton=document.createElement('button');
+    returnButton.setAttribute('id', 'returnButton')
+    creditsBox.appendChild(returnButton)
+    returnButton.innerText = "Return";
+    returnButton.addEventListener("click", () => {
+        creditsScreen.style.display = "none";
+        start.style.filter = "blur" + "(" + 0 + "px)";
+    })
+    /*Solo se puede ejecutar 1 vez el return*/
 })
+
