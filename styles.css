@@ -246,16 +246,45 @@ footer {
     border:none;
     color: white;
 }
-#gameOver{
-    display:none;
-}
+
 
 #gameOver {
-    display: block;
+    display: flex;
     position: relative;
     width: 1200px;
     height: 800px;
     background-color: black;
     background-size: cover;
     margin: 40px;
+    justify-content: center;
+}
+
+#gameOverLogo {
+    font-family: 'VT323';
+    font-size: 120px;
+    font-weight: bold;
+    color:white;
+    justify-content:center;
+}
+
+#menuButton {
+    width: 200px;
+    height: 80px;
+    font-family: 'VT323';
+    font-size: 60px;
+    font-weight: bolder;
+    border-radius: 20px;
+    border-style: hidden;
+
+}
+#winner {
+    color:white;
+    font-family: 'VT323';
+    font-size: 60px;
+    font-weight: bolder;
+}
+
+#winnerImage{
+    background-color: grey;
+    height:400px
 }
