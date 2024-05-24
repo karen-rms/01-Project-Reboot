@@ -77,7 +77,27 @@ class BananoEnemy{
             } else if (banano.health === 20) {
                 bananoHeart2.style.visibility = "hidden";
             } else if (banano.health === 0) {
-                bananoHeart1.style.visibility = "hidden";
+                canvas.style.display = "none";
+                gameOver.style.display = "block";
+                winnerImage.style.backgroundImage = "url(/img/guiri.gif)";
+                winnerImage.style.backgroundSize = "cover";
+                winner.innerText = "Guiri wins";
+                bananoEnemyHeart5.style.visibility = "visible";
+                bananoEnemyHeart4.style.visibility = "visible";
+                bananoEnemyHeart3.style.visibility = "visible";
+                bananoEnemyHeart2.style.visibility = "visible";
+                bananoEnemyHeart1.style.visibility = "visible";
+                bananoHeart5.style.visibility = "visible";
+                bananoHeart4.style.visibility = "visible";
+                bananoHeart3.style.visibility = "visible";
+                bananoHeart2.style.visibility = "visible";
+                bananoHeart1.style.visibility = "visible";
+                bananoEnemy.health = 100;
+                banano.health = 100;
+                this.x=674;
+                this.y=350;
+                banano.x=300;
+                banano.y=350;
             }
         }
     }

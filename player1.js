@@ -77,7 +77,28 @@ class Banano {
         }else if(bananoEnemy.health===20){
             bananoEnemyHeart4.style.visibility = "hidden";
         }else if(bananoEnemy.health===0){
-            bananoEnemyHeart5.style.visibility = "hidden";
+            canvas.style.display="none";
+            gameOver.style.display="block";
+            winnerImage.style.backgroundImage="url(/img/banano.gif)";
+            winnerImage.style.backgroundSize="cover";
+            winner.innerText="Banano wins";
+            bananoEnemyHeart5.style.visibility = "visible";
+            bananoEnemyHeart4.style.visibility = "visible";
+            bananoEnemyHeart3.style.visibility = "visible";
+            bananoEnemyHeart2.style.visibility = "visible";
+            bananoEnemyHeart1.style.visibility = "visible";
+            bananoHeart5.style.visibility = "visible";
+            bananoHeart4.style.visibility = "visible";
+            bananoHeart3.style.visibility = "visible";
+            bananoHeart2.style.visibility = "visible";
+            bananoHeart1.style.visibility = "visible";
+            bananoEnemy.health=100;
+            banano.health=100;
+            this.x=300;
+            this.y=350;
+            bananoEnemy.x=800;
+            bananoEnemy.y=350;
+
         }
         }
     }

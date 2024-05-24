@@ -104,7 +104,8 @@ section {
 
 #bananoEnemy {
     position: absolute;
-    background-color: yellow;
+    background-image: url(/img/guiri.gif);
+    background-size: cover;
 }
 
 footer {
@@ -249,7 +250,7 @@ footer {
 
 
 #gameOver {
-    display: flex;
+    display: none;
     position: relative;
     width: 1200px;
     height: 800px;
@@ -257,6 +258,11 @@ footer {
     background-size: cover;
     margin: 40px;
     justify-content: center;
+}
+#gameOverContent{
+    justify-content: center;
+    margin-left: 400px;
+    margin-top: 10px;
 }
 
 #gameOverLogo {
@@ -275,6 +281,8 @@ footer {
     font-weight: bolder;
     border-radius: 20px;
     border-style: hidden;
+    margin-top: 50px;
+    margin-left: 100px;
 
 }
 #winner {
@@ -282,9 +290,10 @@ footer {
     font-family: 'VT323';
     font-size: 60px;
     font-weight: bolder;
+    margin-left: 70px;
 }
 
 #winnerImage{
-    background-color: grey;
-    height:400px
+    height:400px;
+    width: 400px;
 }

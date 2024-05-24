@@ -32,7 +32,7 @@ function startGame() {
     bananoEnemy.insertBananoEnemy()
     timerMovePlayer = setInterval(() => banano.move(), 3) //esto hace que se mueva el jugador1
     timerMovePlayer2= setInterval(() => bananoEnemy.move(), 3) //esto hace que se mueva el jugador2
-
+    
 }
 
 window.addEventListener("keydown",function(e){
@@ -87,3 +87,7 @@ credits.addEventListener("click",()=>{
     /*Solo se puede ejecutar 1 vez el return*/
 })
 
+menuButton.addEventListener("click",()=>{
+    gameOver.style.display="none";
+    start.style.display="block";
+})
