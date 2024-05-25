@@ -66,7 +66,6 @@ class BananoEnemy{
             console.log(banano.health);
             if (banano.health <= 0) {
                 console.log("La vida de Player1 es: " + banano.health + ", ha muerto");
-
             }
             if (banano.health === 80) {
                 bananoHeart5.style.visibility = "hidden";
@@ -79,7 +78,7 @@ class BananoEnemy{
             } else if (banano.health === 0) {
                 canvas.style.display = "none";
                 gameOver.style.display = "block";
-                winnerImage.style.backgroundImage = "url(/img/guiri.gif)";
+                winnerImage.style.backgroundImage = "url(img/guiri.gif)";
                 winnerImage.style.backgroundSize = "cover";
                 winner.innerText = "Guiri wins";
                 bananoEnemyHeart5.style.visibility = "visible";
@@ -98,7 +97,12 @@ class BananoEnemy{
                 this.y=350;
                 banano.x=300;
                 banano.y=350;
+                soundVictory.play();
+                soundVictory.volume=0.3;
+                soundFightScreen.volume=0;
             }
         }
+        soundHit.play();
+        soundHit.volume=0.2;
     }
 }

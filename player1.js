@@ -62,11 +62,13 @@ class Banano {
             , 20)
         if (this.checkColission() === false && bananoEnemy.health > 0){
             bananoEnemy.health -= banano.strength;
+            
             console.log(bananoEnemy.health);
             if (bananoEnemy.health <= 0){
                 console.log("La vida de Player2 es: " + bananoEnemy.health + ", ha muerto");
-
             }
+        soundHitSixtolo.play();
+        soundHitSixtolo.volume=0.2;
          }
         if(bananoEnemy.health===80){
             bananoEnemyHeart1.style.visibility = "hidden";
@@ -79,7 +81,7 @@ class Banano {
         }else if(bananoEnemy.health===0){
             canvas.style.display="none";
             gameOver.style.display="block";
-            winnerImage.style.backgroundImage="url(/img/banano.gif)";
+            winnerImage.style.backgroundImage="url(img/banano.gif)";
             winnerImage.style.backgroundSize="cover";
             winner.innerText="Banano wins";
             bananoEnemyHeart5.style.visibility = "visible";
@@ -98,7 +100,9 @@ class Banano {
             this.y=350;
             bananoEnemy.x=800;
             bananoEnemy.y=350;
-
+            soundVictory.play();
+            soundVictory.volume=0.3;
+            soundFightScreen.volume=0;
         }
         }
     }

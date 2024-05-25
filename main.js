@@ -6,6 +6,18 @@ let banano = new Banano (300,350);
 
 let bananoEnemy= new BananoEnemy(800,350);
 
+let soundFightScreen = new Audio('sound/start-screen-music.mp3');
+
+let soundJuan= new Audio('sound/matalaJuan.mp3');
+
+let soundHit=new Audio('sound/chuos.mp3');
+
+let soundHitSixtolo = new Audio('sound/ogh.mp3');
+
+let soundNenaDaconte = new Audio('sound/enQueEstrellaEstara.wav');
+
+let soundVictory = new Audio('sound/victory.mp3');
+
 let bananoHeart1 =document.getElementById('heartBanano1');
 let bananoHeart2 = document.getElementById('heartBanano2');
 let bananoHeart3 = document.getElementById('heartBanano3');
@@ -32,7 +44,8 @@ function startGame() {
     bananoEnemy.insertBananoEnemy()
     timerMovePlayer = setInterval(() => banano.move(), 3) //esto hace que se mueva el jugador1
     timerMovePlayer2= setInterval(() => bananoEnemy.move(), 3) //esto hace que se mueva el jugador2
-    
+    soundFightScreen.play();
+    soundFightScreen.volume=0.3;
 }
 
 window.addEventListener("keydown",function(e){
