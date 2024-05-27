@@ -22,6 +22,10 @@ let timerMovePlayer;
 
 let timerMovePlayer2;
 
+let readyInterval;
+
+let removeInterval;
+
 let startScreen = document.getElementById('start');
 let startButton = document.getElementById('start-button');
 let credits = document.getElementById('credits-button'); // hay que trabajar en ello aún
@@ -65,7 +69,9 @@ window.addEventListener('keyup', function (e) { //esto hace que se quede quieto 
 })
 
 startButton.addEventListener("click", () => {
-    console.log("Press")
+    console.log("Press");
+    readyScreen();
+    removeInterval = setTimeout(() => removeReadyScreen(), 2000)
     canvas.style.display = "block"
     start.style.display = "none"
     startGame()
@@ -91,3 +97,19 @@ menuButton.addEventListener("click",()=>{
     gameOver.style.display="none";
     start.style.display="block";
 })
+
+function readyScreen(){
+    screen = document.createElement('div');
+    screen.setAttribute('id','screenReady');
+    readyDiv= document.createElement('div');
+    readyDiv.setAttribute('id','ready');
+    // readyDiv.innerText="No me toques que no te he tocado";
+    board.appendChild(readyDiv);
+    board.appendChild(screen);
+}
+
+function removeReadyScreen(){
+    let ready = document.getElementById("screenReady")
+    ready.parentNode.removeChild(ready);
+    // board.removeChild(screenReady);
+}

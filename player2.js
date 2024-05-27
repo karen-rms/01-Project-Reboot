@@ -79,7 +79,7 @@ class BananoEnemy{
             } else if (banano.health === 0) {
                 canvas.style.display = "none";
                 gameOver.style.display = "block";
-                winnerImage.style.backgroundImage = "url(/img/guiri.gif)";
+                winnerImage.style.backgroundImage = "url(/img/guiriWin.gif)";
                 winnerImage.style.backgroundSize = "cover";
                 winner.innerText = "Guiri wins";
                 bananoEnemyHeart5.style.visibility = "visible";
