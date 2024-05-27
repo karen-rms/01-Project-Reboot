@@ -180,6 +180,7 @@ footer {
     position: absolute;
     top: 120px;
     background-size:contain;
+    animation: pulse 1s infinite;
 }
 
 #start-button {
@@ -198,7 +199,19 @@ footer {
     font-family: 'VT323';
     font-size: 50px;
     font-weight: bolder;
-    
+}
+@keyframes pulse {
+    0% {
+        transform: scale(1);
+    }
+
+    50% {
+        transform: scale(1.1);
+    }
+
+    100% {
+        transform: scale(1);
+    }
 }
 
 #credits-button {
@@ -281,7 +294,7 @@ footer {
     border-style: hidden;
     margin-top: 50px;
     margin-left: 100px;
-
+    animation: pulse 1s infinite;
 }
 #winner {
     color:white;
