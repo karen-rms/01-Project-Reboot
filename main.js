@@ -6,7 +6,7 @@ let banano = new Banano (300,350);
 
 let bananoEnemy= new BananoEnemy(800,350);
 
-let soundFightScreen = new Audio('sound/start-screen-music.mp3');
+let soundFightScreen = new Audio('sound/fightScreen.mp3');
 
 let soundJuan = new Audio('sound/matalaJuan.mp3');
 
@@ -21,6 +21,8 @@ let soundMuerte = new Audio('sound/sonidoMuerte.mp3');
 let soundGuiri= new Audio('sound/pallela.mp3')
 
 let startSound= new Audio('sound/Startsound.mp3')
+
+let soundScreen = new Audio('sound/soundScreen.mp3');
 
 let bananoHeart1 =document.getElementById('heartBanano1');
 let bananoHeart2 = document.getElementById('heartBanano2');
@@ -55,7 +57,7 @@ function startGame() {
     startSound.play()
     startSound.volume=0.3;
     soundFightScreen.play()
-    soundFightScreen.volume = 0.3;
+    soundFightScreen.volume = 0.6;
 }
 
 window.addEventListener("keydown",function(e){
@@ -95,6 +97,7 @@ startButton.addEventListener("click", () => {
     start.style.display = "none"
     soundJuan.play();
     soundJuan.volume = 0.8;
+    soundScreen.volume=0;
 })
 
 credits.addEventListener("click",()=>{
@@ -116,7 +119,9 @@ credits.addEventListener("click",()=>{
 menuButton.addEventListener("click",()=>{
     gameOver.style.display="none";
     start.style.display="block";
-    
+    soundScreen.play();
+    soundScreen.volume=0.5;
+    soundVictory.volume=0;
 })
 
 function readyScreen(){
@@ -132,3 +137,4 @@ function removeReadyScreen(){
     ready.parentNode.removeChild(ready);
     startGame()
 }
+soundScreen.play();
