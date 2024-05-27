@@ -330,3 +330,13 @@ footer {
     margin-top: 20px;
     margin-left: 1050px;
 }
+
+#Timer {
+    font-size: 100px;
+    color: white;
+    position:absolute;
+    font-family: 'VT323';
+    display:block;
+    margin-left: 550px;
+    margin-top: 20px;
+}
