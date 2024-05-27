@@ -67,6 +67,8 @@ class Banano {
                 console.log("La vida de Player2 es: " + bananoEnemy.health + ", ha muerto");
 
             }
+            soundHitSixtolo.play();
+            soundHitSixtolo.volume = 0.1;
          }
         if(bananoEnemy.health===80){
             bananoEnemyHeart1.style.visibility = "hidden";
@@ -81,7 +83,9 @@ class Banano {
             gameOver.style.display="block";
             winnerImage.style.backgroundImage="url(/img/bananoWinner.gif)";
             winnerImage.style.backgroundSize="cover";
-            winner.innerText="Banano wins";
+            winner.innerText ="Banano come fleje de gofio";
+            winner.style.marginLeft= -20 + "px";
+            gameOverLogo.style.marginLeft=-50 + "px";
             bananoEnemyHeart5.style.visibility = "visible";
             bananoEnemyHeart4.style.visibility = "visible";
             bananoEnemyHeart3.style.visibility = "visible";
@@ -98,6 +102,9 @@ class Banano {
             this.y=350;
             bananoEnemy.x=800;
             bananoEnemy.y=350;
+            soundVictory.play();
+            soundVictory.volume = 0.3;
+            soundFightScreen.volume = 0;
 
         }
         }

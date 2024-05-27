@@ -66,8 +66,8 @@ class BananoEnemy{
             console.log(banano.health);
             if (banano.health <= 0) {
                 console.log("La vida de Player1 es: " + banano.health + ", ha muerto");
-
             }
+            
             if (banano.health === 80) {
                 bananoHeart5.style.visibility = "hidden";
             } else if (banano.health === 60) {
@@ -81,7 +81,8 @@ class BananoEnemy{
                 gameOver.style.display = "block";
                 winnerImage.style.backgroundImage = "url(/img/guiriWin.gif)";
                 winnerImage.style.backgroundSize = "cover";
-                winner.innerText = "Guiri wins";
+                winner.innerText = "Guiri se quedó con tu casa en La Isleta";
+                winner.style.marginLeft = -100 + "px"
                 bananoEnemyHeart5.style.visibility = "visible";
                 bananoEnemyHeart4.style.visibility = "visible";
                 bananoEnemyHeart3.style.visibility = "visible";
@@ -98,7 +99,12 @@ class BananoEnemy{
                 this.y=350;
                 banano.x=300;
                 banano.y=350;
+                soundVictory.play();
+                soundVictory.volume = 0.3;
+                soundFightScreen.volume = 0;
             }
+            soundGuiri.play();
+            soundGuiri.volume= 3;
         }
     }
 }

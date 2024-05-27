@@ -14,6 +14,7 @@ body{
     background-image:url(/img/fight-screen.png);
     background-size: contain;
     margin: 40px;
+    
 }
 
 header {
@@ -254,6 +255,7 @@ footer {
     background-size: cover;
     margin: 40px;
     justify-content: center;
+    background-image: url(img/gameOverContent.png);
 }
 #gameOverContent{
     justify-content: center;
@@ -284,9 +286,9 @@ footer {
 #winner {
     color:white;
     font-family: 'VT323';
-    font-size: 60px;
+    font-size: 40px;
     font-weight: bolder;
-    margin-left: 70px;
+    padding-bottom: 50px;
 }
 
 #winnerImage{
@@ -295,26 +297,23 @@ footer {
 }
 
 #screenReady {
-    width: 550px;
-    height: 200px;
+    width: 800px;
+    height: 300px;
     display: block;
     font-family: 'VT323';
-    text-align:center;
-    background-image: url(img/readyScreen.png);
-    margin-top: -30px;
+    background-image: url(img/readyFight.gif);
+    margin-top: 200px;
     position: absolute;
     background-size: contain;
-    margin-left: 350px;
+    margin-left: 250px;
 }
 
-#ready{
-    width: 1200px;
+#insertCoin{
+    background-image: url(img/insertCoin.gif);
     height: 100px;
-    display:block;
-    font-family:'VT323' ;
-    position: absolute;
-    color: black;
-    text-align: center;
-    font-size:40px;
-    margin-top: 100px;
+    width: 100px;
+    position:absolute;
+    background-size: cover;
+    margin-top: 20px;
+    margin-left: 1050px;
 }

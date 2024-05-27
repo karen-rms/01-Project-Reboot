@@ -6,6 +6,22 @@ let banano = new Banano (300,350);
 
 let bananoEnemy= new BananoEnemy(800,350);
 
+let soundFightScreen = new Audio('sound/start-screen-music.mp3');
+
+let soundJuan = new Audio('sound/matalaJuan.mp3');
+
+let soundHitSixtolo = new Audio('sound/ogh.mp3');
+
+let soundNenaDaconte = new Audio('sound/enQueEstrellaEstara.wav');
+
+let soundVictory = new Audio('sound/victory.mp3');
+
+let soundMuerte = new Audio('sound/sonidoMuerte.mp3');
+
+let soundGuiri= new Audio('sound/pallela.mp3')
+
+let startSound= new Audio('sound/Startsound.mp3')
+
 let bananoHeart1 =document.getElementById('heartBanano1');
 let bananoHeart2 = document.getElementById('heartBanano2');
 let bananoHeart3 = document.getElementById('heartBanano3');
@@ -36,7 +52,10 @@ function startGame() {
     bananoEnemy.insertBananoEnemy()
     timerMovePlayer = setInterval(() => banano.move(), 3) //esto hace que se mueva el jugador1
     timerMovePlayer2= setInterval(() => bananoEnemy.move(), 3) //esto hace que se mueva el jugador2
-    
+    startSound.play()
+    startSound.volume=0.3;
+    soundFightScreen.play()
+    soundFightScreen.volume = 0.3;
 }
 
 window.addEventListener("keydown",function(e){
@@ -70,11 +89,12 @@ window.addEventListener('keyup', function (e) { //esto hace que se quede quieto 
 
 startButton.addEventListener("click", () => {
     console.log("Press");
-    readyScreen();
-    removeInterval = setTimeout(() => removeReadyScreen(), 2000)
+    readyInterval= setTimeout(()=> readyScreen(),600);
+    removeInterval = setTimeout(() => removeReadyScreen(), 5300);
     canvas.style.display = "block"
     start.style.display = "none"
-    startGame()
+    soundJuan.play();
+    soundJuan.volume = 0.8;
 })
 
 credits.addEventListener("click",()=>{
@@ -96,20 +116,19 @@ credits.addEventListener("click",()=>{
 menuButton.addEventListener("click",()=>{
     gameOver.style.display="none";
     start.style.display="block";
+    
 })
 
 function readyScreen(){
     screen = document.createElement('div');
     screen.setAttribute('id','screenReady');
-    readyDiv= document.createElement('div');
-    readyDiv.setAttribute('id','ready');
-    // readyDiv.innerText="No me toques que no te he tocado";
-    board.appendChild(readyDiv);
     board.appendChild(screen);
+    body.style.backdropFilter= "blur" + "(" + 4 + "px)";
+    
 }
 
 function removeReadyScreen(){
     let ready = document.getElementById("screenReady")
     ready.parentNode.removeChild(ready);
-    // board.removeChild(screenReady);
+    startGame()
 }
