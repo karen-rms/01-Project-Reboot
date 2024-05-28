@@ -81,7 +81,7 @@ class Banano {
         }else if(bananoEnemy.health===0){
             canvas.style.display="none";
             gameOver.style.display="block";
-            winnerImage.style.backgroundImage="url(/img/bananoWinner.gif)";
+            winnerImage.style.backgroundImage="url(img/bananoWinner.gif)";
             winnerImage.style.backgroundSize="cover";
             winner.innerText ="Banano come fleje de gofio";
             winner.style.marginLeft= -20 + "px";

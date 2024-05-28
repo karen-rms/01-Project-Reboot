@@ -79,7 +79,7 @@ class BananoEnemy{
             } else if (banano.health === 0) {
                 canvas.style.display = "none";
                 gameOver.style.display = "block";
-                winnerImage.style.backgroundImage = "url(/img/guiriWin.gif)";
+                winnerImage.style.backgroundImage = "url(img/guiriWin.gif)";
                 winnerImage.style.backgroundSize = "cover";
                 winner.innerText = "Guiri se quedó con tu casa en La Isleta";
                 winner.style.marginLeft = -100 + "px"
