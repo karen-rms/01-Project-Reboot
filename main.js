@@ -46,20 +46,20 @@ let readyInterval;
 
 let removeInterval;
 
-var timeLeft = 15;
+var timeLeft = 60;
 var elem = document.getElementById('Timer');
 
 
 let startScreen = document.getElementById('start');
 let startButton = document.getElementById('start-button');
-let credits = document.getElementById('credits-button'); // hay que trabajar en ello aún
+let credits = document.getElementById('credits-button'); 
 let returnButton = document.getElementById('returnButton');
 
 function startGame() {
     banano.insertBanano()
     bananoEnemy.insertBananoEnemy()
-    timerMovePlayer = setInterval(() => banano.move(), 3) //esto hace que se mueva el jugador1
-    timerMovePlayer2= setInterval(() => bananoEnemy.move(), 3) //esto hace que se mueva el jugador2
+    timerMovePlayer = setInterval(() => banano.move(), 3)
+    timerMovePlayer2= setInterval(() => bananoEnemy.move(), 3) 
     startSound.play()
     startSound.volume=0.3;
     soundFightScreen.play()
@@ -90,13 +90,13 @@ window.addEventListener("keydown",function(e){
 }
 )
 
-window.addEventListener('keyup', function (e) { //esto hace que se quede quieto el pj dsps de clicar 1 vez
+window.addEventListener('keyup', function (e) { 
     banano.direction = 0;
     bananoEnemy.direction=0;
 })
 
 startButton.addEventListener("click", () => {
-    console.log("Press");
+    
     readyInterval= setTimeout(()=> readyScreen(),600);
     removeInterval = setTimeout(() => removeReadyScreen(), 5300);
     canvas.style.display = "block"
@@ -123,7 +123,7 @@ credits.addEventListener("click",()=>{
     returnButton.addEventListener("click", () => {
         handleClick()
     })
-    /*Solo se puede ejecutar 1 vez el return*/
+    
 })
 
 menuButton.addEventListener("click",()=>{
@@ -161,7 +161,7 @@ function countdown() {
   }
 
   let startTime = null;
-  const duration =10000; // Duración de la animación en milisegundos
+  const duration =10000; 
 
   function animateBird(timestamp) {
     if (!startTime) startTime = timestamp;
@@ -169,11 +169,11 @@ function countdown() {
     const progress = elapsed / duration;
     birdie.style.display="block"
     
-    // Mueve el pájaro a lo largo de la duración
+   
     birdie.style.left = progress * 1100 + 'px';
 
     if (progress < 1) {
-      // Sigue animando hasta que se alcance el final
+      
       requestAnimationFrame(animateBird);
     } else {
      birdie.style.display ="none"

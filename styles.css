@@ -242,7 +242,7 @@ footer {
     text-align: center;
     position: absolute;
     margin-top: 150px;
-    left: 850px;
+    margin-left: auto;
 }
 
 #returnButton{

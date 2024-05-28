@@ -22,17 +22,17 @@ class Banano {
     
     checkColission() {
         if (banano.x > bananoEnemy.x + bananoEnemy.width ||
-            banano.x + banano.width < bananoEnemy.x //||
-            //banano.y > bananoEnemy.y + bananoEnemy.height ||
-            //banano.y + banano.height < bananoEnemy.y
+            banano.x + banano.width < bananoEnemy.x 
+            
+            
         )
         {
             return true
         } else {
-            //banano.x = bananoEnemy.x
+            
             banano.direction= -1 ;
             bananoEnemy.direction = 1;
-            //console.log("collision detected")
+            
             setTimeout(this.stop,300)
             return false
         }
@@ -62,9 +62,9 @@ class Banano {
             , 20)
         if (this.checkColission() === false && bananoEnemy.health > 0){
             bananoEnemy.health -= banano.strength;
-            console.log(bananoEnemy.health);
+            
             if (bananoEnemy.health <= 0){
-                console.log("La vida de Player2 es: " + bananoEnemy.health + ", ha muerto");
+                
 
             }
             soundHitSixtolo.play();
