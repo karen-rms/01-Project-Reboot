@@ -268,7 +268,7 @@ footer {
     background-size: cover;
     margin: 40px;
     justify-content: center;
-    background-image: url(img/gameOverContent.png);
+    background-image: url(img/fireworks.gif.gif);
 }
 #gameOverContent{
     justify-content: center;
@@ -292,7 +292,7 @@ footer {
     font-weight: bolder;
     border-radius: 20px;
     border-style: hidden;
-    margin-top: 50px;
+    margin-top: 70px;
     margin-left: 100px;
     animation: pulse 1s infinite;
 }
@@ -302,6 +302,7 @@ footer {
     font-size: 40px;
     font-weight: bolder;
     padding-bottom: 50px;
+    padding-top: 20px;
 }
 
 #winnerImage{
@@ -329,4 +330,36 @@ footer {
     background-size: cover;
     margin-top: 20px;
     margin-left: 1050px;
+}
+
+#Timer {
+    font-size: 100px;
+    color: white;
+    position:absolute;
+    font-family: 'VT323';
+    display:block;
+    margin-left: 550px;
+    margin-top: 20px;
+}
+
+
+#bird {
+    display:none;
+    position:absolute;
+    width: 150px;
+    height: 100px;
+    background-image: url(/img/bird.gif);
+    margin-top: 130px;
+    background-size: cover;
+    margin-left:-10px
+    
+}
+
+#seagull{
+    position:absolute;
+    background-image: url(img/craab.gif);
+    width: 60px;
+    height: 60px;
+    background-size: cover;
+    margin-top: 500px;
 }

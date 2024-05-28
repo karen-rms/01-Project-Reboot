@@ -24,6 +24,8 @@ let startSound= new Audio('sound/Startsound.mp3')
 
 let soundScreen = new Audio('sound/soundScreen.mp3');
 
+let birdie = document.getElementById('bird')
+
 let bananoHeart1 =document.getElementById('heartBanano1');
 let bananoHeart2 = document.getElementById('heartBanano2');
 let bananoHeart3 = document.getElementById('heartBanano3');
@@ -43,6 +45,10 @@ let timerMovePlayer2;
 let readyInterval;
 
 let removeInterval;
+
+var timeLeft = 15;
+var elem = document.getElementById('Timer');
+
 
 let startScreen = document.getElementById('start');
 let startButton = document.getElementById('start-button');
@@ -98,6 +104,11 @@ startButton.addEventListener("click", () => {
     soundJuan.play();
     soundJuan.volume = 0.8;
     soundScreen.volume=0;
+    let timerId = setTimeout(() => {
+        setInterval(countdown, 1000);
+    }, 4500);
+    startGameInterval = setTimeout(()=> startGame(),5300)
+    setTimeout(()=>requestAnimationFrame(animateBird),5300)
 })
 
 credits.addEventListener("click",()=>{
@@ -110,19 +121,18 @@ credits.addEventListener("click",()=>{
     creditsBox.appendChild(returnButton)
     returnButton.innerText = "Return";
     returnButton.addEventListener("click", () => {
-        creditsScreen.style.display = "none";
-        start.style.filter = "blur" + "(" + 0 + "px)";
+        handleClick()
     })
     /*Solo se puede ejecutar 1 vez el return*/
 })
 
 menuButton.addEventListener("click",()=>{
-    gameOver.style.display="none";
-    start.style.display="block";
-    soundScreen.play();
-    soundScreen.volume=0.5;
-    soundVictory.volume=0;
+    handleClick()
 })
+
+function handleClick() {
+    window.location.reload();
+  }
 
 function readyScreen(){
     screen = document.createElement('div');
@@ -138,3 +148,35 @@ function removeReadyScreen(){
     startGame()
 }
 soundScreen.play();
+
+function countdown() {
+    if (timeLeft === 0) {
+      elem.innerHTML = "";
+      clearInterval(timerId); 
+      
+    } else {
+      elem.innerHTML = timeLeft;
+      timeLeft--;
+    }
+  }
+
+  let startTime = null;
+  const duration =10000; // Duración de la animación en milisegundos
+
+  function animateBird(timestamp) {
+    if (!startTime) startTime = timestamp;
+    const elapsed = timestamp - startTime;
+    const progress = elapsed / duration;
+    birdie.style.display="block"
+    
+    // Mueve el pájaro a lo largo de la duración
+    birdie.style.left = progress * 1100 + 'px';
+
+    if (progress < 1) {
+      // Sigue animando hasta que se alcance el final
+      requestAnimationFrame(animateBird);
+    } else {
+     birdie.style.display ="none"
+    }
+  }
+
