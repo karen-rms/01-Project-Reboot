@@ -240,9 +240,10 @@ footer {
     background-size: contain;
     color:white;
     text-align: center;
+    display:block;
     position: absolute;
     margin-top: 150px;
-    left: 850px;
+    margin-left: auto;
 }
 
 #returnButton{

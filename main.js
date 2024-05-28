@@ -46,7 +46,7 @@ let readyInterval;
 
 let removeInterval;
 
-var timeLeft = 15;
+var timeLeft = 60;
 var elem = document.getElementById('Timer');
 
 
